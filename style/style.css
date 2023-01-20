@@ -5,7 +5,18 @@ body {
   background-color: hsl(222deg, 26%, 31%);
 }
 
+.flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+}
+
 .upperContainer {
+  border: 1px solid red;
   display: flex;
   flex-direction: column;
   height: 22vh;
@@ -14,11 +25,52 @@ body {
   margin-right: auto;
 }
 .upperContainer .themeContainer {
+  border: 1px solid yellow;
   height: 10vh;
   align-items: center;
-  justify-content: start;
+  justify-content: space-between;
   padding-left: 5%;
   color: hsl(0deg, 0%, 100%);
+}
+.upperContainer .themeContainer .title {
+  height: 100%;
+  padding-top: 15px;
+  border: 1px solid forestgreen;
+}
+.upperContainer .themeContainer .switchContainer {
+  width: 50%;
+  height: 100%;
+  border: 3px solid pink;
+  justify-content: space-between;
+}
+.upperContainer .themeContainer .switchContainer h3 {
+  width: 50%;
+  border: 1px solid red;
+}
+.upperContainer .themeContainer .switchContainer #mainSwitcher {
+  width: 50%;
+  border: 1px solid wheat;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.upperContainer .themeContainer .switchContainer #mainSwitcher .numbers {
+  justify-content: space-between;
+  width: 60%;
+  height: 50%;
+  border: 1px solid red;
+}
+.upperContainer .themeContainer .switchContainer #mainSwitcher .switcher {
+  justify-content: space-between;
+  width: 70%;
+  height: 50%;
+  background-color: white;
+  border-radius: 7px;
+}
+.upperContainer .themeContainer .switchContainer #mainSwitcher .switcher p {
+  color: black;
+  height: 5%;
+  border-radius: 100px;
+  background-color: red;
 }
 .upperContainer .displayContainer {
   height: 14vh;
