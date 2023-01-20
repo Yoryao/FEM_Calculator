@@ -1,32 +1,88 @@
 body {
   margin: 0;
-  padding: 5%;
+  padding: 0;
   box-sizing: border-box;
-  height: 1000px;
-  width: 800px;
+  background-color: hsl(222deg, 26%, 31%);
 }
 
-.container {
+.upperContainer {
+  display: flex;
+  flex-direction: column;
+  height: 22vh;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.upperContainer .themeContainer {
+  height: 10vh;
+  align-items: center;
+  justify-content: start;
+  padding-left: 5%;
+  color: hsl(0deg, 0%, 100%);
+}
+.upperContainer .displayContainer {
+  height: 14vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 10px;
+  background-color: hsl(224deg, 36%, 15%);
+}
+.upperContainer .displayContainer h2 {
+  font-size: 3rem;
+  padding-right: 8%;
+  color: hsl(0deg, 0%, 100%);
+}
+
+.keypad {
+  box-sizing: border-box;
   display: grid;
-  height: 500px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  gap: 15px;
-}
-
-.container__btn {
-  border: 1px solid red;
-  font-size: 20px;
+  height: 70vh;
+  width: 85%;
+  margin: 5% auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 6%;
+  grid-template-columns: repeat(4, 22%);
+  grid-template-rows: repeat(5, 14%);
+  gap: 5%;
+  background-color: hsl(223deg, 31%, 20%);
   border-radius: 15px;
 }
 
+.btnFont {
+  font-weight: 700;
+  font-size: 32px;
+  font-family: "League Spartan", sans-serif;
+  color: hsl(221deg, 14%, 31%);
+}
+
+.container__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  background-color: hsl(30deg, 25%, 89%);
+  box-shadow: 0px 5px hsl(28deg, 16%, 65%);
+}
+
 .container__btn_large {
-  background-color: aqua;
+  background-color: hsl(225deg, 21%, 49%);
+  box-shadow: 0px 5px hsl(224deg, 28%, 35%);
   grid-column: 1/3;
+  color: hsl(0deg, 0%, 100%);
 }
 
 .container__btn:last-child {
   grid-column: 3/5;
+  background-color: hsl(6deg, 63%, 50%);
+  box-shadow: 0px 5px hsl(6deg, 70%, 34%);
+  color: hsl(0deg, 0%, 100%);
 }
 
-/*# sourceMappingURL=style.css.map */
+#delBtn {
+  background-color: hsl(225deg, 21%, 49%);
+  box-shadow: 0px 5px hsl(224deg, 28%, 35%);
+  color: hsl(0deg, 0%, 100%);
+}/*# sourceMappingURL=style.css.map */

@@ -4,30 +4,36 @@ let numero1 = 0;
 let numero2 = 0;
 let operation = 0;
 let resultado = 0;
+let displayNumber = 0;
+
 
 function print(value) {
   if (operation == 0) {
     if (numero1 == 0) {
       numero1 = value;
-      console.log("Primer Ingreso1: " + numero1);
+      display(numero1)
     } else {
       numero1 += value;
-      console.log("Numero1: " + numero1);
+      display(numero1)
     }
   } else {
     if (numero2 == 0) {
       numero2 = value;
-      console.log("Primer Ingreso2: " + numero2);
+      display(numero2)
     } else {
       numero2 += value;
-      console.log("Numero2: " + numero2);
+      display(numero2)
     }
   }
 }
 
-function operator(x, value) {
-  operation = 0;
-  console.log("Se ha presionado: " + value);
+function display(num) {
+  let display = document.getElementById("display");
+  display.innerText = num; 
+}
+
+
+function operator(x) {
   operation = x;
 }
 
@@ -37,7 +43,7 @@ function result() {
       resultado = numero1 - numero2;
       break;
     case 2:
-      resultado = numero1 + numero2;
+      resultado = parseInt(numero1) + parseInt(numero2);
       break;
     case 3:
       resultado = numero1 / numero2;
@@ -46,8 +52,8 @@ function result() {
       resultado = numero1 * numero2;
       break;
   }
-
-  console.log("Resultado: " + resultado);
+  reset();
+  display(resultado);
 }
 
 function reset() {
@@ -55,5 +61,6 @@ function reset() {
   numero1 = 0;
   numero2 = 0;
   operation = 0;
-  resultado = 0;
+  display(0);
 }
+

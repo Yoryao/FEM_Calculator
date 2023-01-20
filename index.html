@@ -11,28 +11,48 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
 
     <title>Frontend Mentor | Calculator app</title>
+    <body>
 
-<div class="container">
-    <button class="container__btn" onclick="print(value)" value="7">7</button>
-    <button class="container__btn" onclick="print(value)" value="8">8</button>
-    <button class="container__btn" onclick="print(value)" value="9">9</button>
-    <button class="container__btn" onclick="clear(value)" value="d">del</button>
-    <button class="container__btn" onclick="print(value)" value="4">4</button>
-    <button class="container__btn" onclick="print(value)" value="5">5</button>
-    <button class="container__btn" onclick="print(value)" value="6">6</button>
-    <button class="container__btn" onclick="operator(2, value)" value="+">+</button>
-    <button class="container__btn" onclick="print(value)" value="1">1</button>
-    <button class="container__btn" onclick="print(value)" value="2">2</button>
-    <button class="container__btn" onclick="print(value)" value="3">3</button>
-    <button class="container__btn" onclick="operator(1, value)" value="-">-</button>
-    <button class="container__btn" onclick="print(value)" value=".">.</button>
-    <button class="container__btn" onclick="print(value)" value="0">0</button>
-    <button class="container__btn" onclick="operator(3, value)" value="/">/</button>
-    <button class="container__btn" onclick="operator(4, value)" value="*">*</button>
-    <button class="container__btn container__btn_large" onclick="reset()">reset</button>
-    <button class="container__btn container__btn_large" onclick="result()">=</button>
+
+      <div class="upperContainer">
+          <div class="themeContainer">
+              <h1 class="title">calc</h1>  
+          </div>
+          <div class="displayContainer">
+              <h2 class="display btnFont" id="display">0</h2>
+          </div>
+      </div>
+
+
+
+
+
+
+
+<div class="keypad">
+    <button class="container__btn btnFont" onclick="print(value)" value="7">7</button>
+    <button class="container__btn btnFont" onclick="print(value)" value="8">8</button>
+    <button class="container__btn btnFont" onclick="print(value)" value="9">9</button>
+    <button class="container__btn btnFont" id="delBtn" onclick="clear(value)" value="d">DEL</button>
+    <button class="container__btn btnFont" onclick="print(value)" value="4">4</button>
+    <button class="container__btn btnFont" onclick="print(value)" value="5">5</button>
+    <button class="container__btn btnFont" onclick="print(value)" value="6">6</button>
+    <button class="container__btn btnFont" onclick="operator(2)" value="+">+</button>
+    <button class="container__btn btnFont" onclick="print(value)" value="1">1</button>
+    <button class="container__btn btnFont" onclick="print(value)" value="2">2</button>
+    <button class="container__btn btnFont" onclick="print(value)" value="3">3</button>
+    <button class="container__btn btnFont" onclick="operator(1)" value="-">-</button>
+    <button class="container__btn btnFont" onclick="print(value)" value=".">.</button>
+    <button class="container__btn btnFont" onclick="print(value)" value="0">0</button>
+    <button class="container__btn btnFont" onclick="operator(3)" value="/">/</button>
+    <button class="container__btn btnFont" onclick="operator(4)" value="*">x</button>
+    <button class="container__btn btnFont container__btn_large" onclick="reset()">RESET</button>
+    <button class="container__btn btnFont container__btn_large" onclick="result()">=</button>
   </div>
 
 
@@ -59,5 +79,5 @@
 
 <script src="./app.js"></script>
   </head>
-  <body></body>
+  </body>
 </html>
