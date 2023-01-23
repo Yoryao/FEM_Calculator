@@ -1,28 +1,45 @@
-@use "_colors";
+@use "_color";
 
+.uno {  //Backgrounds
+    background-color:  color.$AmainBG;// hsl(222, 26%, 31%);
+--mainKBG:  color.$AKBG-TB;// hsl(223, 31%, 20%);
+--shadowBG:  color.$ASBG;// hsl(224, 36%, 15%);
+// //Keys
+// $AKBG: hsl(225, 21%, 49%);
+// $AKS: hsl(224, 28%, 35%);
+// $ARKBG: hsl(6, 63%, 50%);
+// $ARKS: hsl(6, 70%, 34S);
+// $AOKBG: hsl(30, 25%, 89%);
+// $AOS: hsl(28, 16%, 65%);
+// //Text
+// $ATextBlue: hsl(221, 14%, 31%);
+// $ATextWhite:hsl(0, 0%, 100%);
+}
 
-$colorUno: yellow;
-$colorDos: red;
-$colorTres: green;
+.dos  { background-color: color.$BmainBG;
+        --mainKBG: color.$BKBG-TB;
+        --shadowBG: color.$BSBG;}
 
-.uno {  --color__primary: red;}
-
-.dos  {--color__primary: yellow;}
-
-.tres { --color__primary: green;}
-
-
-
+.tres { background-color: color.$CmainBG;
+        --mainKBG: color.$CKBG-TB;
+    }
 
 
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // background-color: colors.$AAVeryDarkDesaturatedBlue;
-    background-color: var(--color__primary);
+    background-color:  color.$AmainBG;
+    
+    .dos {
+        background-color: color.$BmainBG;
+    }
 
+    .tres { background-color: color.$CmainBG;
+        --mainKBG: color.$CKBG-TB;
+    }
 }
+
 
 .flexCol{
     display: flex;
@@ -42,13 +59,13 @@ body {
     width: 85%;
     margin-left: auto;
     margin-right: auto;
-    background-color: var(--color__primary);
+    background-color: var(--mainBG);
     .themeContainer {
         height: 10vh;
         align-items: center;
         justify-content: space-between;
         padding-left: 5%;
-        color: colors.$FontWhite;
+        color: var(--mainKBG);
 
         .title {
             height: 100%;
@@ -101,7 +118,7 @@ body {
                         color: black;
                         height: 100%;
                         width: 33%;
-                        background-color: red;
+                      
 
                     }
                 }
@@ -135,7 +152,7 @@ body {
     h2 {
         font-size: 3rem;
         padding-right: 8%;
-        color: colors.$FontWhite;
+        // color: colors.$FontWhite;
     }
 }
 }
@@ -152,16 +169,38 @@ body {
     grid-template-columns: repeat(4, 22%);
     grid-template-rows: repeat(5, 14%);
     gap: 5%;
-    background-color: colors.$ABVeryDarkDesaturatedBlue;
     border-radius: 15px;
+
+    .uno {
+        background-color: color.$AKBG;        color: color.$CKBG;
+       
+
+    }
+    
+    .dos {
+        background-color: color.$BKBG; color: color.$AKBG;
+       
+    }
+    
+    .tres {
+        background-color: color.$CKBG; color: color.$BKBG;
+
+    }
 }
 
 .btnFont {
     font-weight: 700;
     font-size: 32px;
     font-family: 'League Spartan', sans-serif;
-    color: colors.$FontVerydarkgrayishblue;
+    .uno {
+    }
     
+    .dos {
+    }
+    
+    .tres {
+
+    }
 }
 
 .container__btn {
@@ -170,30 +209,30 @@ body {
     align-items: center;
     border: none;
     border-radius: 10px;
-    background-color: colors.$Lightgrayishorange;
-    box-shadow: 0px 5px colors.$Grayishorange;
+    // background-color: colors.$Lightgrayishorange;
+    // box-shadow: 0px 5px colors.$Grayishorange;
 
-     background-color: var(--color__primary);
+    //  background-color: var(--color__primary);
 }
 
 .container__btn_large {
-    background-color: colors.$ADDesaturatedDarkBlue;
-    box-shadow: 0px 5px colors.$AEDesaturateddarkblue;
+    // background-color: colors.$ADDesaturatedDarkBlue;
+    // box-shadow: 0px 5px colors.$AEDesaturateddarkblue;
     grid-column: 1 / 3  ; 
-    color: colors.$FontWhite;    
+    // color: colors.$FontWhite;    
 }
 
 .container__btn:last-child {
     grid-column: 3 / 5  ; 
-    background-color: colors.$Red;
-    box-shadow: 0px 5px colors.$DarkRed;
-    color: colors.$FontWhite;    
+    // background-color: colors.$Red;
+    // box-shadow: 0px 5px colors.$DarkRed;
+    // color: colors.$FontWhite;    
 }
 
 #delBtn {
-    background-color: colors.$ADDesaturatedDarkBlue;
-    box-shadow: 0px 5px colors.$AEDesaturateddarkblue;
-    color: colors.$FontWhite;    
+    // background-color: colors.$ADDesaturatedDarkBlue;
+    // box-shadow: 0px 5px colors.$AEDesaturateddarkblue;
+    // color: colors.$FontWhite;    
 }
 
 .selector:hover {

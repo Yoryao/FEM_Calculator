@@ -1,20 +1,32 @@
 .uno {
-  --color__primary: red;
+  background-color: hsl(222deg, 26%, 31%);
+  --mainKBG: color.$AKBG-TB;
+  --shadowBG: color.$ASBG;
 }
 
 .dos {
-  --color__primary: yellow;
+  background-color: hsl(0deg, 0%, 90%);
+  --mainKBG: color.$BKBG-TB;
+  --shadowBG: color.$BSBG;
 }
 
 .tres {
-  --color__primary: green;
+  background-color: hsl(268deg, 75%, 9%);
+  --mainKBG: color.$CKBG-TB;
 }
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: var(--color__primary);
+  background-color: hsl(222deg, 26%, 31%);
+}
+body .dos {
+  background-color: hsl(0deg, 0%, 90%);
+}
+body .tres {
+  background-color: hsl(268deg, 75%, 9%);
+  --mainKBG: color.$CKBG-TB;
 }
 
 .flexCol {
@@ -34,14 +46,14 @@ body {
   width: 85%;
   margin-left: auto;
   margin-right: auto;
-  background-color: var(--color__primary);
+  background-color: var(--mainBG);
 }
 .upperContainer .themeContainer {
   height: 10vh;
   align-items: center;
   justify-content: space-between;
   padding-left: 5%;
-  color: hsl(0deg, 0%, 100%);
+  color: var(--mainKBG);
 }
 .upperContainer .themeContainer .title {
   height: 100%;
@@ -85,7 +97,6 @@ body {
   color: black;
   height: 100%;
   width: 33%;
-  background-color: red;
 }
 .upperContainer .displayContainer {
   height: 14vh;
@@ -98,7 +109,6 @@ body {
 .upperContainer .displayContainer h2 {
   font-size: 3rem;
   padding-right: 8%;
-  color: hsl(0deg, 0%, 100%);
 }
 
 .keypad {
@@ -113,48 +123,44 @@ body {
   grid-template-columns: repeat(4, 22%);
   grid-template-rows: repeat(5, 14%);
   gap: 5%;
-  background-color: hsl(223deg, 31%, 20%);
   border-radius: 15px;
+}
+.keypad .uno {
+  background-color: hsl(225deg, 21%, 49%);
+  color: hsl(281deg, 89%, 26%);
+}
+.keypad .dos {
+  background-color: hsl(185deg, 42%, 37%);
+  color: hsl(225deg, 21%, 49%);
+}
+.keypad .tres {
+  background-color: hsl(281deg, 89%, 26%);
+  color: hsl(185deg, 42%, 37%);
 }
 
 .btnFont {
   font-weight: 700;
   font-size: 32px;
   font-family: "League Spartan", sans-serif;
-  color: hsl(221deg, 14%, 31%);
 }
-
 .container__btn {
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
   border-radius: 10px;
-  background-color: hsl(30deg, 25%, 89%);
-  box-shadow: 0px 5px hsl(28deg, 16%, 65%);
-  background-color: var(--color__primary);
 }
 
 .container__btn_large {
-  background-color: hsl(225deg, 21%, 49%);
-  box-shadow: 0px 5px hsl(224deg, 28%, 35%);
   grid-column: 1/3;
-  color: hsl(0deg, 0%, 100%);
 }
 
 .container__btn:last-child {
   grid-column: 3/5;
-  background-color: hsl(6deg, 63%, 50%);
-  box-shadow: 0px 5px hsl(6deg, 70%, 34%);
-  color: hsl(0deg, 0%, 100%);
-}
-
-#delBtn {
-  background-color: hsl(225deg, 21%, 49%);
-  box-shadow: 0px 5px hsl(224deg, 28%, 35%);
-  color: hsl(0deg, 0%, 100%);
 }
 
 .selector:hover {
   cursor: pointer;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
