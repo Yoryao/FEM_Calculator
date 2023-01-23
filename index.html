@@ -16,7 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
 
     <title>Frontend Mentor | Calculator app</title>
-    <body>
+    <body class="uno">
 
 
       <div class="upperContainer flexCol">
@@ -26,8 +26,21 @@
                 <h3>THEME</h3>
                 <div id="mainSwitcher" class="flexCol mainSwitcher">
                   
-                    <div class="numbers flexRow"><p>1</p><p>2</p><p>3</p></div>
-                    <div class="switcher flex"><span>x</span><span>x</span><span>x</span></div>
+                    <div class="numbers flexRow">
+                      <div id="swn1"  value="1" class="selector" >1</div>
+                      <div id="swn2"  value="2" class="selector" >2</div>
+                      <div id="swn3"  value="3" class="selector" >3</div>
+                    </div>
+                    <div class="switcher flexRow">
+                      <div id="swb1" class="selector">1</div>
+                      <div id="swb2" class="selector">2</div>
+                      <div id="swb3" class="selector">3</div>
+<!--                     
+                    
+                      <span>x</span>
+                      <span>x</span>
+                      <span>x</span> -->
+                    </div> 
                   
                 </div>
               </div>
@@ -49,24 +62,24 @@
 
 
 <div class="keypad">
-    <button class="container__btn btnFont" onclick="print(value)" value="7">7</button>
-    <button class="container__btn btnFont" onclick="print(value)" value="8">8</button>
-    <button class="container__btn btnFont" onclick="print(value)" value="9">9</button>
-    <button class="container__btn btnFont" id="delBtn" onclick="clear(value)" value="d">DEL</button>
-    <button class="container__btn btnFont" onclick="print(value)" value="4">4</button>
-    <button class="container__btn btnFont" onclick="print(value)" value="5">5</button>
-    <button class="container__btn btnFont" onclick="print(value)" value="6">6</button>
-    <button class="container__btn btnFont" onclick="operator(2)" value="+">+</button>
-    <button class="container__btn btnFont" onclick="print(value)" value="1">1</button>
-    <button class="container__btn btnFont" onclick="print(value)" value="2">2</button>
-    <button class="container__btn btnFont" onclick="print(value)" value="3">3</button>
-    <button class="container__btn btnFont" onclick="operator(1)" value="-">-</button>
-    <button class="container__btn btnFont" onclick="print(value)" value=".">.</button>
-    <button class="container__btn btnFont" onclick="print(value)" value="0">0</button>
-    <button class="container__btn btnFont" onclick="operator(3)" value="/">/</button>
-    <button class="container__btn btnFont" onclick="operator(4)" value="*">x</button>
-    <button class="container__btn btnFont container__btn_large" onclick="reset()">RESET</button>
-    <button class="container__btn btnFont container__btn_large" onclick="result()">=</button>
+    <button class="container__btn btnFont uno" onclick="print(value)" value="7">7</button>
+    <button class="container__btn btnFont uno" onclick="print(value)" value="8">8</button>
+    <button class="container__btn btnFont uno" onclick="print(value)" value="9">9</button>
+    <button class="container__btn btnFont uno" id="delBtn" onclick="clear(value)" value="d">DEL</button>
+    <button class="container__btn btnFont uno" onclick="print(value)" value="4">4</button>
+    <button class="container__btn btnFont uno" onclick="print(value)" value="5">5</button>
+    <button class="container__btn btnFont uno" onclick="print(value)" value="6">6</button>
+    <button class="container__btn btnFont uno" onclick="operator(2)" value="+">+</button>
+    <button class="container__btn btnFont uno" onclick="print(value)" value="1">1</button>
+    <button class="container__btn btnFont uno" onclick="print(value)" value="2">2</button>
+    <button class="container__btn btnFont uno" onclick="print(value)" value="3">3</button>
+    <button class="container__btn btnFont uno" onclick="operator(1)" value="-">-</button>
+    <button class="container__btn btnFont uno" onclick="print(value)" value=".">.</button>
+    <button class="container__btn btnFont uno" onclick="print(value)" value="0">0</button>
+    <button class="container__btn btnFont uno" onclick="operator(3)" value="/">/</button>
+    <button class="container__btn btnFont uno" onclick="operator(4)" value="*">x</button>
+    <button class="container__btn btnFont uno container__btn_large" onclick="reset()">RESET</button>
+    <button class="container__btn btnFont uno container__btn_large" onclick="result()">=</button>
   </div>
 
 

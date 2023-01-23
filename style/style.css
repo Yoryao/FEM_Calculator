@@ -1,8 +1,20 @@
+.uno {
+  --color__primary: red;
+}
+
+.dos {
+  --color__primary: yellow;
+}
+
+.tres {
+  --color__primary: green;
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: hsl(222deg, 26%, 31%);
+  background-color: var(--color__primary);
 }
 
 .flexCol {
@@ -16,16 +28,15 @@ body {
 }
 
 .upperContainer {
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   height: 22vh;
   width: 85%;
   margin-left: auto;
   margin-right: auto;
+  background-color: var(--color__primary);
 }
 .upperContainer .themeContainer {
-  border: 1px solid yellow;
   height: 10vh;
   align-items: center;
   justify-content: space-between;
@@ -40,36 +51,40 @@ body {
 .upperContainer .themeContainer .switchContainer {
   width: 50%;
   height: 100%;
-  border: 3px solid pink;
   justify-content: space-between;
 }
 .upperContainer .themeContainer .switchContainer h3 {
   width: 50%;
-  border: 1px solid red;
 }
 .upperContainer .themeContainer .switchContainer #mainSwitcher {
   width: 50%;
-  border: 1px solid wheat;
   justify-content: space-evenly;
   align-items: center;
 }
+.upperContainer .themeContainer .switchContainer #mainSwitcher .selector {
+  border: 1px solid red;
+  height: 100%;
+  width: 33%;
+}
 .upperContainer .themeContainer .switchContainer #mainSwitcher .numbers {
   justify-content: space-between;
-  width: 60%;
+  width: 70%;
   height: 50%;
-  border: 1px solid red;
 }
 .upperContainer .themeContainer .switchContainer #mainSwitcher .switcher {
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 70%;
   height: 50%;
   background-color: white;
   border-radius: 7px;
 }
-.upperContainer .themeContainer .switchContainer #mainSwitcher .switcher p {
+.upperContainer .themeContainer .switchContainer #mainSwitcher .switcher .selector {
+  border: 1px solid rgb(38, 196, 90);
+}
+.upperContainer .themeContainer .switchContainer #mainSwitcher .switcher div {
   color: black;
-  height: 5%;
-  border-radius: 100px;
+  height: 100%;
+  width: 33%;
   background-color: red;
 }
 .upperContainer .displayContainer {
@@ -78,7 +93,7 @@ body {
   justify-content: flex-end;
   align-items: center;
   border-radius: 10px;
-  background-color: hsl(224deg, 36%, 15%);
+  background-color: var(--color__primary);
 }
 .upperContainer .displayContainer h2 {
   font-size: 3rem;
@@ -117,6 +132,7 @@ body {
   border-radius: 10px;
   background-color: hsl(30deg, 25%, 89%);
   box-shadow: 0px 5px hsl(28deg, 16%, 65%);
+  background-color: var(--color__primary);
 }
 
 .container__btn_large {
@@ -137,4 +153,8 @@ body {
   background-color: hsl(225deg, 21%, 49%);
   box-shadow: 0px 5px hsl(224deg, 28%, 35%);
   color: hsl(0deg, 0%, 100%);
+}
+
+.selector:hover {
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */
