@@ -1,4 +1,4 @@
-@use "_color";
+@use "_palette";
 
 body {
   margin: 0;
@@ -6,13 +6,13 @@ body {
   box-sizing: border-box;
 }
 .uno {
-  background-color: color.$AmainBG;
+  background-color: palette.$AmainBackground;
 }
 .dos {
-  background-color: color.$BmainBG;
+  background-color: palette.$BmainBackground;
 }
 .tres {
-  background-color: color.$CmainBG;
+  background-color: palette.$CmainBackground;
 }
 
 .flexCol {
@@ -34,118 +34,116 @@ body {
   margin-right: auto;
 
   .themeContainer {
-      height: 10vh;
-      align-items: center;
-      justify-content: space-between;
-      padding-left: 5%;
+    height: 10vh;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 5%;
 
-      .uno {
-        color: color.$ATextWhite;
-      }
-      .dos {
-        color: color.$BTextYellow;
-      }
-      .tres {
-        color: color.$CtextYellow;
-      }
+    .uno {
+      color: palette.$AtextWhite;
+    }
+    .dos {
+      color: palette.$BtextYellow;
+    }
+    .tres {
+      color: palette.$CtextYellow;
+    }
 
     .title {
-        height: 100%;
-        width: 50%;
-        padding-top: 15px;
-        .uno {
-            color: color.$ATextWhite;
-          }
-          .dos {
-            color: color.$BTextYellow;
-          }
-          .tres {
-            color: color.$CtextYellow;
-          }
+      height: 100%;
+      width: 50%;
+      padding-top: 15px;
     }
-    
+
     .switchContainer {
+      width: 50%;
+      height: 100%;
+      justify-content: space-between;
+
+      #mainSwitcher {
         width: 50%;
-        height: 100%;
-        justify-content: space-between;
-        
-        #mainSwitcher {
-            width: 50%;
-            justify-content: space-evenly;
-            align-items: center;
-            .numbers{
-                align-items: center;
-                width: 70%;
-              height: 50%;
-            .selector {
-                text-align: center;
-                border: 1px solid yellow;
-                height: 100%;
-                width: 33%;
-            }
+        justify-content: space-evenly;
+        align-items: center;
+        .numbers {
+          align-items: center;
+          width: 70%;
+          height: 50%;
+          .selector {
+            text-align: center;
+            height: 100%;
+            width: 33%;
+          }
         }
         .uno {
-            color: color.$ATextWhite;
+          color: palette.$AtextWhite;
         }
         .dos {
-            color: color.$BTextYellow;
+          color: palette.$BtextYellow;
         }
         .tres {
-            color: color.$CtextYellow;
+          color: palette.$CtextYellow;
         }
-        
 
         .switcher {
+          border: 1px solid red;
           justify-content: space-evenly;
           width: 70%;
           height: 50%;
           background-color: white;
-          border-radius: 7px;
+          border-radius: 100px;
+          border-radius: 100px;
 
-        
           .uno {
-              background-color: color.$AKBG-TB;
+            background-color: palette.$AswitcherKeypadBackground;
           }
           .dos {
-              background-color: color.$BKBG-TB;
+            background-color: palette.$BswitcherKeypadBackground;
           }
           .tres {
-              background-color: color.$CKBG-TB;
+            background-color: palette.$CswitcherKeypadBackgroundScreen;
           }
-        
+
           div {
-              color: transparent;
-              height: 100%;
-              width: 33%;
-
-
-
-
-
+            color: transparent;
+            height: 100%;
+            width: 33%;
           }
         }
       }
     }
   }
+}
 
-  .displayContainer {
-    height: 14vh;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    border-radius: 10px;
-    
-    h2 {
+.displayContainer {
+  height: 14vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 10px;
+  
+    .uno {
+      background-color: palette.$AscreenBackGround;
       font-size: 3rem;
       padding-right: 8%;
     }
-}
+
+    .dos {
+      background-color: palette.$BscreenBackGround;
+      font-size: 3rem;
+      padding-right: 8%;
+    }
+
+    .tres {
+      background-color: palette.$CswitcherKeypadBackgroundScreen;
+      font-size: 3rem;
+      padding-right: 8%;
+    }
+
+
 
 }
-
 // .keypad {
- body .keypad{
-
+body .keypad {
   box-sizing: border-box;
   border: 1px solid red;
   display: grid;
@@ -161,19 +159,15 @@ body {
   border-radius: 15px;
 
   .uno {
-    background-color: color.$AKBG;
-    color: color.$ATextWhite;
+    background-color: palette.$AswitcherKeypadBackground;
   }
 
   .dos {
-    background-color: color.$BKBG;
-    color: color.$BTextWhite;
+    background-color: palette.$BswitcherKeypadBackground;
   }
 
   .tres {
-    background-color: color.$CKBG;
-    color: color.$BKBG;
-    color: color.$CtextWhite;
+    background-color: palette.$CswitcherKeypadBackgroundScreen;
   }
 }
 
@@ -209,10 +203,19 @@ body {
   // color: colors.$FontWhite;
 }
 
-#delBtn {
-  // background-color: colors.$ADDesaturatedDarkBlue;
-  // box-shadow: 0px 5px colors.$AEDesaturateddarkblue;
-  color: color.$ATextWhite;
+.container__btn {
+  color: palette.$AtextWhite;
+
+  & .uno {
+    box-shadow: 0px 5px palette.$AkeyShadow;
+    background-color: palette.$AkeyBackGround;
+  }
+  & .dos {
+    box-shadow: 0px 5px palette.$BkeyShadow;
+  }
+  & .tres {
+    box-shadow: 0px 5px palette.$CkeyShadow;
+  }
 }
 
 .selector:hover {
