@@ -1,240 +1,220 @@
 @use "_color";
 
-.uno {  //Backgrounds
-    background-color:  color.$AmainBG;// hsl(222, 26%, 31%);
---mainKBG:  color.$AKBG-TB;// hsl(223, 31%, 20%);
---shadowBG:  color.$ASBG;// hsl(224, 36%, 15%);
-// //Keys
-// $AKBG: hsl(225, 21%, 49%);
-// $AKS: hsl(224, 28%, 35%);
-// $ARKBG: hsl(6, 63%, 50%);
-// $ARKS: hsl(6, 70%, 34S);
-// $AOKBG: hsl(30, 25%, 89%);
-// $AOS: hsl(28, 16%, 65%);
-// //Text
-// $ATextBlue: hsl(221, 14%, 31%);
-// $ATextWhite:hsl(0, 0%, 100%);
-}
-
-.dos  { background-color: color.$BmainBG;
-        --mainKBG: color.$BKBG-TB;
-        --shadowBG: color.$BSBG;}
-
-.tres { background-color: color.$CmainBG;
-        --mainKBG: color.$CKBG-TB;
-    }
-
-
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color:  color.$AmainBG;
-    
-    .dos {
-        background-color: color.$BmainBG;
-    }
-
-    .tres { background-color: color.$CmainBG;
-        --mainKBG: color.$CKBG-TB;
-    }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.uno {
+  background-color: color.$AmainBG;
+}
+.dos {
+  background-color: color.$BmainBG;
+}
+.tres {
+  background-color: color.$CmainBG;
 }
 
-
-.flexCol{
-    display: flex;
-    flex-direction: column;
+.flexCol {
+  display: flex;
+  flex-direction: column;
 }
 
-.flexRow{
-    display: flex;
-    flex-direction: row;
+.flexRow {
+  display: flex;
+  flex-direction: row;
 }
-
 
 .upperContainer {
-    display: flex;
-    flex-direction: column;
-    height: 22vh;
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: var(--mainBG);
-    .themeContainer {
-        height: 10vh;
-        align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 22vh;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+
+  .themeContainer {
+      height: 10vh;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 5%;
+
+      .uno {
+        color: color.$ATextWhite;
+      }
+      .dos {
+        color: color.$BTextYellow;
+      }
+      .tres {
+        color: color.$CtextYellow;
+      }
+
+    .title {
+        height: 100%;
+        width: 50%;
+        padding-top: 15px;
+        .uno {
+            color: color.$ATextWhite;
+          }
+          .dos {
+            color: color.$BTextYellow;
+          }
+          .tres {
+            color: color.$CtextYellow;
+          }
+    }
+    
+    .switchContainer {
+        width: 50%;
+        height: 100%;
         justify-content: space-between;
-        padding-left: 5%;
-        color: var(--mainKBG);
-
-        .title {
-            height: 100%;
-            padding-top: 15px;
-            border: 1px solid forestgreen;
-
-        }
-
-
-        .switchContainer {
-            width: 50% ;
-            height: 100%;
-            justify-content: space-between;
         
-            h3 {
-                width: 50%;
-            }
-        
-            #mainSwitcher{
-                width: 50%;
-                justify-content: space-evenly;
+        #mainSwitcher {
+            width: 50%;
+            justify-content: space-evenly;
+            align-items: center;
+            .numbers{
                 align-items: center;
-
-                .selector {
-                    border: 1px solid red;
-                    height: 100%;
-                        width: 33%;
-                }
-
-
-
-                .numbers {
-                    justify-content: space-between;
-                    width: 70%;
-                    height: 50%;
-                }
-
-                .switcher {
-                    justify-content: space-evenly;
-                    width: 70%;
-                    height: 50%;
-                    background-color: white;
-                    border-radius: 7px;
-
-                                    .selector {
-                    border: 1px solid rgb(38, 196, 90);
-                }
-
-                    div {
-                        color: black;
-                        height: 100%;
-                        width: 33%;
-                      
-
-                    }
-                }
-
+                width: 70%;
+              height: 50%;
+            .selector {
+                text-align: center;
+                border: 1px solid yellow;
+                height: 100%;
+                width: 33%;
             }
-        
-        
-        
         }
+        .uno {
+            color: color.$ATextWhite;
+        }
+        .dos {
+            color: color.$BTextYellow;
+        }
+        .tres {
+            color: color.$CtextYellow;
+        }
+        
+
+        .switcher {
+          justify-content: space-evenly;
+          width: 70%;
+          height: 50%;
+          background-color: white;
+          border-radius: 7px;
+
+        
+          .uno {
+              background-color: color.$AKBG-TB;
+          }
+          .dos {
+              background-color: color.$BKBG-TB;
+          }
+          .tres {
+              background-color: color.$CKBG-TB;
+          }
+        
+          div {
+              color: transparent;
+              height: 100%;
+              width: 33%;
 
 
 
 
 
-
-
-
-
-
-
-
+          }
+        }
+      }
     }
+  }
+
+  .displayContainer {
+    height: 14vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-radius: 10px;
     
-    .displayContainer {
-        height: 14vh;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        border-radius: 10px;
-        background-color: var(--color__primary);
     h2 {
-        font-size: 3rem;
-        padding-right: 8%;
-        // color: colors.$FontWhite;
+      font-size: 3rem;
+      padding-right: 8%;
     }
 }
+
 }
 
-.keypad {
-    box-sizing: border-box;
-    display: grid;
-    height: 70vh;
-    width: 85%;
-    margin: 5% auto;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 6%;
-    grid-template-columns: repeat(4, 22%);
-    grid-template-rows: repeat(5, 14%);
-    gap: 5%;
-    border-radius: 15px;
+// .keypad {
+ body .keypad{
 
-    .uno {
-        background-color: color.$AKBG;        color: color.$CKBG;
-       
+  box-sizing: border-box;
+  border: 1px solid red;
+  display: grid;
+  height: 70vh;
+  width: 85%;
+  margin: 5% auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 6%;
+  grid-template-columns: repeat(4, 22%);
+  grid-template-rows: repeat(5, 14%);
+  gap: 5%;
+  border-radius: 15px;
 
-    }
-    
-    .dos {
-        background-color: color.$BKBG; color: color.$AKBG;
-       
-    }
-    
-    .tres {
-        background-color: color.$CKBG; color: color.$BKBG;
+  .uno {
+    background-color: color.$AKBG;
+    color: color.$ATextWhite;
+  }
 
-    }
+  .dos {
+    background-color: color.$BKBG;
+    color: color.$BTextWhite;
+  }
+
+  .tres {
+    background-color: color.$CKBG;
+    color: color.$BKBG;
+    color: color.$CtextWhite;
+  }
 }
 
 .btnFont {
-    font-weight: 700;
-    font-size: 32px;
-    font-family: 'League Spartan', sans-serif;
-    .uno {
-    }
-    
-    .dos {
-    }
-    
-    .tres {
-
-    }
+  font-weight: 700;
+  font-size: 32px;
+  font-family: "League Spartan", sans-serif;
 }
 
 .container__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    border-radius: 10px;
-    // background-color: colors.$Lightgrayishorange;
-    // box-shadow: 0px 5px colors.$Grayishorange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 10px;
+  // background-color: colors.$Lightgrayishorange;
+  // box-shadow: 0px 5px colors.$Grayishorange;
 
-    //  background-color: var(--color__primary);
+  //  background-color: var(--color__primary);
 }
 
 .container__btn_large {
-    // background-color: colors.$ADDesaturatedDarkBlue;
-    // box-shadow: 0px 5px colors.$AEDesaturateddarkblue;
-    grid-column: 1 / 3  ; 
-    // color: colors.$FontWhite;    
+  // background-color: colors.$ADDesaturatedDarkBlue;
+  // box-shadow: 0px 5px colors.$AEDesaturateddarkblue;
+  grid-column: 1 / 3;
+  // color: colors.$FontWhite;
 }
 
 .container__btn:last-child {
-    grid-column: 3 / 5  ; 
-    // background-color: colors.$Red;
-    // box-shadow: 0px 5px colors.$DarkRed;
-    // color: colors.$FontWhite;    
+  grid-column: 3 / 5;
+  // background-color: colors.$Red;
+  // box-shadow: 0px 5px colors.$DarkRed;
+  // color: colors.$FontWhite;
 }
 
 #delBtn {
-    // background-color: colors.$ADDesaturatedDarkBlue;
-    // box-shadow: 0px 5px colors.$AEDesaturateddarkblue;
-    // color: colors.$FontWhite;    
+  // background-color: colors.$ADDesaturatedDarkBlue;
+  // box-shadow: 0px 5px colors.$AEDesaturateddarkblue;
+  color: color.$ATextWhite;
 }
 
 .selector:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
