@@ -101,10 +101,18 @@ body {
 .upperContainer .themeContainer .switchContainer #mainSwitcher .switcher .tres {
   background-color: hsl(268deg, 71%, 12%);
 }
-.upperContainer .themeContainer .switchContainer #mainSwitcher .switcher div {
+.upperContainer .themeContainer .switchContainer #mainSwitcher .switcher .selector {
   color: transparent;
   height: 100%;
   width: 33%;
+}
+.upperContainer .themeContainer .switchContainer #mainSwitcher .switcher .selector:first-child {
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+.upperContainer .themeContainer .switchContainer #mainSwitcher .switcher .selector:last-child {
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
 }
 
 .displayContainer {
@@ -113,45 +121,49 @@ body {
   justify-content: flex-end;
   align-items: center;
   border-radius: 10px;
+  font-size: 3rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-right: 8%;
 }
-.displayContainer .uno {
+
+div.displayContainer.uno {
   background-color: hsl(224deg, 36%, 15%);
-  font-size: 3rem;
-  padding-right: 8%;
+  color: hsl(0deg, 0%, 100%);
 }
-.displayContainer .dos {
+
+div.displayContainer.dos {
   background-color: hsl(0deg, 0%, 93%);
-  font-size: 3rem;
-  padding-right: 8%;
+  color: hsl(60deg, 10%, 19%);
 }
-.displayContainer .tres {
+
+div.displayContainer.tres {
   background-color: hsl(268deg, 71%, 12%);
-  font-size: 3rem;
-  padding-right: 8%;
+  color: hsl(52deg, 100%, 62%);
 }
 
 body .keypad {
   box-sizing: border-box;
-  border: 1px solid red;
   display: grid;
   height: 70vh;
   width: 85%;
   margin: 5% auto;
-  margin-left: auto;
-  margin-right: auto;
   padding: 6%;
   grid-template-columns: repeat(4, 22%);
   grid-template-rows: repeat(5, 14%);
   gap: 5%;
   border-radius: 15px;
 }
-body .keypad .uno {
+
+div.keypad.uno {
   background-color: hsl(223deg, 31%, 20%);
 }
-body .keypad .dos {
+
+div.keypad.dos {
   background-color: hsl(0deg, 5%, 81%);
 }
-body .keypad .tres {
+
+div.keypad.tres {
   background-color: hsl(268deg, 71%, 12%);
 }
 
@@ -177,22 +189,84 @@ body .keypad .tres {
   grid-column: 3/5;
 }
 
-.container__btn {
-  color: hsl(0deg, 0%, 100%);
+button.genericBtn.uno {
+  box-shadow: 0px 5px hsl(28deg, 16%, 65%);
+  background-color: hsl(30deg, 25%, 89%);
+  color: hsl(221deg, 14%, 31%);
 }
-.container__btn .uno {
+
+button.genericBtn.dos {
+  box-shadow: 0px 5px hsl(35deg, 11%, 61%);
+  background-color: hsl(45deg, 7%, 89%);
+  color: hsl(60deg, 10%, 19%);
+}
+
+button.genericBtn.tres {
+  box-shadow: 0px 5px hsl(285deg, 91%, 52%);
+  background-color: hsl(281deg, 89%, 26%);
+  color: hsl(52deg, 100%, 62%);
+}
+
+button.delBtn.uno,
+button.resetBtn.uno {
   box-shadow: 0px 5px hsl(224deg, 28%, 35%);
   background-color: hsl(225deg, 21%, 49%);
+  color: hsl(0deg, 0%, 100%);
 }
-.container__btn .dos {
+
+button.delBtn.dos,
+button.resetBtn.dos {
   box-shadow: 0px 5px hsl(185deg, 58%, 25%);
+  background-color: hsl(185deg, 42%, 37%);
+  color: hsl(0deg, 0%, 100%);
 }
-.container__btn .tres {
-  box-shadow: 0px 5px hsl(285deg, 91%, 52%);
+
+button.delBtn.tres,
+button.resetBtn.tres {
+  box-shadow: 0px 5px hsl(268deg, 47%, 21%);
+  background-color: hsl(290deg, 70%, 36%);
+  color: hsl(0deg, 0%, 100%);
+}
+
+button.resultBtn.uno {
+  box-shadow: 0px 5px hsl(6deg, 70%, 34%);
+  background-color: hsl(6deg, 63%, 50%);
+  color: hsl(0deg, 0%, 100%);
+}
+
+button.resultBtn.dos {
+  box-shadow: 0px 5px hsl(25deg, 99%, 27%);
+  background-color: hsl(25deg, 98%, 40%);
+  color: hsl(0deg, 0%, 100%);
+}
+
+button.resultBtn.tres {
+  box-shadow: 0px 5px hsl(177deg, 92%, 70%);
+  background-color: hsl(176deg, 100%, 44%);
+  color: hsl(198deg, 20%, 13%);
 }
 
 .selector:hover {
   cursor: pointer;
+}
+
+@media screen and (width > 500px) {
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .upperContainer {
+    width: 50%;
+    min-width: 600px;
+  }
+  .upperContainer .themeContainer {
+    height: 10vh;
+  }
+  body .keypad {
+    width: 50%;
+    min-width: 600px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

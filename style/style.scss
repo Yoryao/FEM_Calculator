@@ -103,10 +103,20 @@ body {
             background-color: palette.$CswitcherKeypadBackgroundScreen;
           }
 
-          div {
+          .selector {
             color: transparent;
             height: 100%;
             width: 33%;
+          }
+
+          .selector:first-child {
+            border-top-left-radius: 100px;
+            border-bottom-left-radius: 100px;
+          }
+
+          .selector:last-child {
+            border-top-right-radius: 100px;
+            border-bottom-right-radius: 100px;
           }
         }
       }
@@ -120,55 +130,55 @@ body {
   justify-content: flex-end;
   align-items: center;
   border-radius: 10px;
-  
-    .uno {
-      background-color: palette.$AscreenBackGround;
-      font-size: 3rem;
-      padding-right: 8%;
-    }
-
-    .dos {
-      background-color: palette.$BscreenBackGround;
-      font-size: 3rem;
-      padding-right: 8%;
-    }
-
-    .tres {
-      background-color: palette.$CswitcherKeypadBackgroundScreen;
-      font-size: 3rem;
-      padding-right: 8%;
-    }
-
-
-
+  font-size: 3rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-right: 8%;
 }
+
+//display container
+
+div.displayContainer.uno {
+  background-color: palette.$AscreenBackGround;
+  color: palette.$AtextWhite;
+}
+
+div.displayContainer.dos {
+  background-color: palette.$BscreenBackGround;
+  color: palette.$BtextYellow;
+}
+
+div.displayContainer.tres {
+  background-color: palette.$CswitcherKeypadBackgroundScreen;
+  color: palette.$CtextYellow;
+}
+
 // .keypad {
 body .keypad {
   box-sizing: border-box;
-  border: 1px solid red;
   display: grid;
   height: 70vh;
   width: 85%;
   margin: 5% auto;
-  margin-left: auto;
-  margin-right: auto;
   padding: 6%;
   grid-template-columns: repeat(4, 22%);
   grid-template-rows: repeat(5, 14%);
   gap: 5%;
   border-radius: 15px;
+}
 
-  .uno {
-    background-color: palette.$AswitcherKeypadBackground;
-  }
+//keypad container
 
-  .dos {
-    background-color: palette.$BswitcherKeypadBackground;
-  }
+div.keypad.uno {
+  background-color: palette.$AswitcherKeypadBackground;
+}
 
-  .tres {
-    background-color: palette.$CswitcherKeypadBackgroundScreen;
-  }
+div.keypad.dos {
+  background-color: palette.$BswitcherKeypadBackground;
+}
+
+div.keypad.tres {
+  background-color: palette.$CswitcherKeypadBackgroundScreen;
 }
 
 .btnFont {
@@ -183,41 +193,96 @@ body .keypad {
   align-items: center;
   border: none;
   border-radius: 10px;
-  // background-color: colors.$Lightgrayishorange;
-  // box-shadow: 0px 5px colors.$Grayishorange;
-
-  //  background-color: var(--color__primary);
 }
 
 .container__btn_large {
-  // background-color: colors.$ADDesaturatedDarkBlue;
-  // box-shadow: 0px 5px colors.$AEDesaturateddarkblue;
   grid-column: 1 / 3;
-  // color: colors.$FontWhite;
 }
 
 .container__btn:last-child {
   grid-column: 3 / 5;
-  // background-color: colors.$Red;
-  // box-shadow: 0px 5px colors.$DarkRed;
-  // color: colors.$FontWhite;
 }
 
-.container__btn {
-  color: palette.$AtextWhite;
+//generic Button
+button.genericBtn.uno {
+  box-shadow: 0px 5px palette.$AorangeKeyShadow;
+  background-color: palette.$AorangeKeyBackground;
+  color: palette.$AtextBlue;
+}
+button.genericBtn.dos {
+  box-shadow: 0px 5px palette.$ByellowKeyShadow;
+  background-color: palette.$BorangeKeyBackground;
+  color: palette.$BtextYellow;
+}
+button.genericBtn.tres {
+  box-shadow: 0px 5px palette.$CkeyShadow;
+  background-color: palette.$CkeyBackGround;
+  color: palette.$CtextYellow;
+}
 
-  & .uno {
-    box-shadow: 0px 5px palette.$AkeyShadow;
-    background-color: palette.$AkeyBackGround;
-  }
-  & .dos {
-    box-shadow: 0px 5px palette.$BkeyShadow;
-  }
-  & .tres {
-    box-shadow: 0px 5px palette.$CkeyShadow;
-  }
+//reset & delBtn Button
+
+button.delBtn.uno,
+button.resetBtn.uno {
+  box-shadow: 0px 5px palette.$AkeyShadow;
+  background-color: palette.$AkeyBackGround;
+  color: palette.$AtextWhite;
+}
+button.delBtn.dos,
+button.resetBtn.dos {
+  box-shadow: 0px 5px palette.$BkeyShadow;
+  background-color: palette.$BkeyBackGround;
+  color: palette.$BtextWhite;
+}
+button.delBtn.tres,
+button.resetBtn.tres {
+  box-shadow: 0px 5px palette.$CvioletKeyBackground;
+  background-color: palette.$CmagentaKeyShadow;
+  color: palette.$CtextWhite;
+}
+
+//result button
+button.resultBtn.uno {
+  box-shadow: 0px 5px palette.$AredShadow;
+  background-color: palette.$AredKeyBackgroundSwitcher;
+  color: palette.$AtextWhite;
+}
+button.resultBtn.dos {
+  box-shadow: 0px 5px palette.$BorangeKeyShadow;
+  background-color: palette.$BorangeKeyBackgroundSwitcher;
+  color: palette.$BtextWhite;
+}
+button.resultBtn.tres {
+  box-shadow: 0px 5px palette.$CcyanKeyShadow;
+  background-color: palette.$CcyanKeyBackgroundSwitcher;
+  color: palette.$CtextBlue;
 }
 
 .selector:hover {
   cursor: pointer;
+}
+
+@media screen and (width > 500px) {
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .upperContainer {
+    width: 50%;
+    min-width: 600px;
+
+    .themeContainer {
+      height: 10vh;
+    }
+  }
+
+  // .keypad {
+  body .keypad {
+    width: 50%;
+    min-width: 600px;
+  }
+
+  //keypad container
 }
